@@ -24,7 +24,7 @@ function App() {
     setEditValue(value);
   };
   const handleSave = (index) => {
-    let res = bookName.map((el, i) => (i == index ? editValue : el));
+    let res = bookName.map((el, i) => (i === index ? editValue : el));
 
     setBookName(res);
     setEditIndex(-1);
@@ -42,7 +42,7 @@ function App() {
                 type="checkbox"
               />
               {el}
-              {editIndex == i ? (
+              {editIndex === i ? (
                 <>
                   <input
                     value={editValue}
